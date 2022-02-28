@@ -55,6 +55,10 @@ set completeopt=longest,menuone,noinsert,noselect
 set wildchar=<Tab> wildmenu wildmode=full
 set hidden
 
+" Quality of life: mouse and clipboard
+set mouse=a
+set clipboard^=unnamed,unnamedplus
+
 " Plugins
 call plug#begin()
     Plug 'BurntSushi/ripgrep'
@@ -81,6 +85,7 @@ call plug#begin()
     Plug 'xavierd/clang_complete'
     Plug 'ervandew/supertab'
     Plug 'mbbill/undotree'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
     Plug 'habamax/vim-godot'
@@ -111,6 +116,9 @@ let g:clang_library_path='/usr/lib/llvm-10/lib/libclang-10.so.1'
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']  " list of CoC extensions needed
 
 let g:mkdp_auto_close = 1
+
+" Godot
+let g:godot_executable = 'D:\Games\steamapps\common\Godot Engine\godot.exe'
 
 " leader for macros used later (seen as <Leader> in remaps)
 let mapleader=" "
